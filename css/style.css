@@ -1,6 +1,19 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.8rem;
+}
 .container {
   margin: 0 auto;
   padding: 60px 0 0;
   max-width: 640px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 3rem;
+}
+
+hr {
+  margin: 3rem 0;
+}
