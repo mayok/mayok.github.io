@@ -19,6 +19,10 @@ hr {
   margin: 3rem 0;
 }
 
+section {
+  padding-top: 1em;
+}
+
 .list-horizontal {
   display: inline-block;
   list-style-type: none;
