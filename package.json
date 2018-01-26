@@ -1,0 +1,25 @@
+{
+  "name": "mayok.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/css/style.css -d dist/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayok/mayok.github.io.git"
+  },
+  "author": "Naohiro Iwamoto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mayok/mayok.github.io/issues"
+  },
+  "homepage": "https://github.com/mayok/mayok.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "postcss-cli": "^4.1.1",
+    "postcss-import": "^11.0.0",
+    "postcss-nested": "^3.0.0"
+  }
+}
