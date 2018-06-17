@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "postcss --no-map src/css -d css"
+    "build:css": "postcss --no-map src/css -d css",
+    "build": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,23 @@
   "homepage": "https://github.com/mayok/mayok.github.io#readme",
   "devDependencies": {
     "autoprefixer": "^8.0.0",
+    "awesome-typescript-loader": "^5.0.0",
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
     "postcss-cli": "^5.0.0",
     "postcss-custom-media": "^6.0.0",
     "postcss-import": "^11.0.0",
-    "postcss-nested": "^3.0.0"
+    "postcss-loader": "^2.1.5",
+    "postcss-nested": "^3.0.0",
+    "style-loader": "^0.21.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "@types/react": "^16.3.18",
+    "@types/react-dom": "^16.0.6",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   }
 }
