@@ -10,14 +10,19 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: 'Verela Round', sans-serif;
+  font-family: "Verela Round", sans-serif;
   font-size: 1.2rem;
   background-color: var(--site-bg-color);
 }
-body, h1, h2, h3, p {
+body,
+h1,
+h2,
+h3,
+p {
   margin: 0;
 }
-a, body {
+a,
+body {
   color: #393939;
   text-decoration: none;
 }
@@ -37,7 +42,6 @@ a, body {
   max-width: 1000px;
 
   @media (--medium) {
-
   }
 }
 .tp-Logo_Divider {
@@ -79,7 +83,7 @@ a, body {
   font-size: 2.2rem;
 }
 
-.st-Grid_Wapper {
+.st-Grid_Wrapper {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -88,7 +92,7 @@ a, body {
 .st-Grid {
   margin: 0 auto 20px;
   width: 90%;
-  border: 1px solid rgba(39, 39, 39, .12);
+  border: 1px solid rgba(39, 39, 39, 0.12);
   border-radius: 3px;
   background-color: var(--grid-bg-color);
 
@@ -113,13 +117,12 @@ a, body {
 .st-Grid_Unit {
   margin-top: 12px;
   padding: 16px;
-  border: 1px solid rgba(39, 39, 39, .12);
+  border: 1px solid rgba(39, 39, 39, 0.12);
   background-color: var(--unit-bg-color);
 
   &:hover {
     transition: background-color 0.25s ease;
     background-color: var(--main-color);
-
   }
 }
 .st-Grid_Title {
