@@ -2,10 +2,6 @@ import * as React from "react";
 
 import Article from "./Article";
 
-interface Items {
-  name: string;
-  items: Item[];
-}
 interface Item {
   title: string;
   info: string;
@@ -20,59 +16,31 @@ class Articles extends React.Component<{}, State> {
   constructor(props: any) {
     super(props);
 
-    this.setState({});
+    this.state = {};
   }
 
   componentDidMount() {
     fetch("/data.json")
       .then(response => response.json())
       .then(data => {
+        console.log(data.data);
         this.setState({
-          [data.data[0].name]: data.data[0].items,
-          [data.data[1].name]: data.data[1].items
+          [data.data[0].name.toLowerCase()]: data.data[0].items,
+          [data.data[1].name.toLowerCase()]: data.data[1].items
         });
       });
   }
 
   render() {
     const prefix = "st-Grid";
-    const labels: Items[] = [
-      {
-        name: "Project",
-        items: [
-          {
-            title: "ゆゆ式",
-            info: "github.com/mayok/yuyushiki",
-            link: "https://github.com/mayok/yuyushiki"
-          }
-        ]
-      },
-      {
-        name: "hoge",
-        items: [
-          {
-            title: "hoge",
-            info: "",
-            link: ""
-          }
-        ]
-      }
-    ];
+    const { s } = this.state;
+
     return (
       <div className={`${prefix}_Wrapper`}>
-        {this.state["project"].map((item: Item) => (
-          <Article
-            key={item.title}
-            title={item.title}
-            info={item.info}
-            link={item.link}
-          />
-        ))}
-        {/* {labels.map((label: Items) => (
-          <div key={label.name.toLowerCase()} className={prefix}>
-            <h2 className={`${prefix}_MajorTitle`}>{label.name}</h2>
-
-            {label.items.map((item: Item) => (
+        <div className={prefix}>
+          <h2 className={`${prefix}_MajorTitle`}>Projects</h2>
+          {this.state["projects"] &&
+            this.state["projects"].map((item: Item) => (
               <Article
                 key={item.title}
                 title={item.title}
@@ -80,8 +48,20 @@ class Articles extends React.Component<{}, State> {
                 link={item.link}
               />
             ))}
-          </div>
-        ))} */}
+        </div>
+
+        <div className={prefix}>
+          <h2 className={`${prefix}_MajorTitle`}>hoge</h2>
+          {this.state["hoge"] &&
+            this.state["hoge"].map((item: Item) => (
+              <Article
+                key={item.title}
+                title={item.title}
+                info={item.info}
+                link={item.link}
+              />
+            ))}
+        </div>
       </div>
     );
   }
