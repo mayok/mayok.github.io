@@ -101,8 +101,11 @@ body {
     width: 350px;
   }
 }
-.st-Grid_Inner {
+.st-Grid .st-Grid_Inner:last-child {
   padding: 12px 24px 36px;
+}
+.st-Grid_Inner {
+  padding: 12px 24px 2px;
 }
 .st-Grid_MajorTitle {
   margin: 20px 0 0;
