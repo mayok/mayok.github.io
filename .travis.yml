@@ -15,6 +15,9 @@ install:
   - npm install
   - npm run build:prod
 
+script:
+  - echo "Skipping tests"
+
 deploy:
   provider: pages
   skip-cleanup: true
